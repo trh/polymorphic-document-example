@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  occurred_at: 2018-02-05 15:29:56
+  status: 1
+
+two:
+  title: MyString
+  occurred_at: 2018-02-05 15:29:56
+  status: 1

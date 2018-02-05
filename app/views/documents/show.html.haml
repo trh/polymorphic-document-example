@@ -1,0 +1,25 @@
+%p#notice= notice
+%p
+  %strong Title:
+  = @document.title
+%p
+  %strong Description:
+  = @document.description
+%p
+  %strong File:
+  = @document.file
+%p
+  %strong Active:
+  = @document.active
+%p
+  %strong Documentable type:
+  = @document.documentable_type
+%p
+  %strong Documentable:
+  = @document.documentable_id
+%p
+  %strong Tag:
+  = @document.tag
+= link_to 'Edit', edit_document_path(@document)
+|
+= link_to 'Back', documents_path

@@ -1,0 +1,12 @@
+= simple_form_for(@receipt) do |f|
+  .form-inputs
+    = f.input :title
+    = f.input :occurred_at
+    = f.input :status, as: :radio_buttons, collection: [["Active", 0],["Inactive",1]]
+    = f.simple_fields_for :document do |doc|
+      = doc.input :title, label: "Receipt Location Title"
+      = doc.input :description
+      = doc.input :active, as: :radio_buttons, label: "PreApproved"
+      = doc.input :file, label: "Upload copy of receipt"
+  .form-actions
+    = f.submit

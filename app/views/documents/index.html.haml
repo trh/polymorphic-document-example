@@ -1,0 +1,28 @@
+%p#notice= notice
+%h1 Listing Documents
+%table.table.table-striped
+  %thead
+    %tr
+      %th Title
+      %th Description
+      %th File
+      %th Active
+      %th Documentable type
+      %th Documentable
+      %th Tag
+      %th{:colspan => "3"}
+  %tbody
+    - @documents.each do |document|
+      %tr
+        %td= document.title
+        %td= document.description
+        %td= document.file
+        %td= document.active
+        %td= document.documentable_type
+        %td= document.documentable_id
+        %td= document.tag
+        %td= link_to 'Show', document
+        %td= link_to 'Edit', edit_document_path(document)
+        %td= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Document', new_document_path
